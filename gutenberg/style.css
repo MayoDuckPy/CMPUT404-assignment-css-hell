@@ -1,0 +1,32 @@
+/* Add sepia background */
+body {
+    background-color: hsl(38 54% 83%);
+}
+
+/* Theme book only, not header info */
+:is(.book, .chapter) > :is(p, pre),
+.book > table[data-summary="carol"] {
+    font-family: cursive;  /* Make change obvious at the cost of readability */
+    font-size: 2.5ch;
+    line-height: 3ch;
+    margin-block: 2ch;
+}
+
+:is(.book, .chapter) > pre {
+    font-size: 2ch;
+}
+
+:is(.book, .chapter) > :is(h1, h2, h3, h4, h5, h6, .fig) {
+    color: indianred;
+}
+
+/* Force images to fit on screen */
+img {
+    max-height: 100vh;
+    width: auto !important;
+}
+
+figcaption,
+.fig + h4 {
+    color: hsl(30 24% 56%);
+}

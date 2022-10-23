@@ -1,0 +1,7 @@
+# CMPUT 404 - Assignment 3
+
+## Part I
+
+Part I lives in the `gutenberg/` directory and contains three Project Gutenberg
+books with an additional custom theme applied.
+Each book has been modified to link to the new CSS theme and the correct book cover.
