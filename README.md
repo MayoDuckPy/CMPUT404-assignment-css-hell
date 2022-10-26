@@ -17,6 +17,11 @@ Part I lives in the `gutenberg/` directory and contains three Project Gutenberg
 books with an additional custom theme applied.
 Each book has been modified to link to the new CSS theme and the correct book cover.
 
+## Part II
+
+Part II lives in the `homepage/` directory and consists of two HTML pages both
+with the same content but drastically different CSS themes.
+
 # License/Copyright
 
 Textual content is copyright Michael Huang (C) 2022 under the CC-BY-SA 4.0
