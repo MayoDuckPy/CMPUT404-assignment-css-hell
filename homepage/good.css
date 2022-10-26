@@ -1,0 +1,99 @@
+:root {
+    --bg-primary:   #141B1E;
+    --bg-secondary: #232A2D;
+    --fg-primary:   #DADADA;
+    --fg-secondary: #B3B9B8;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header   header"
+        "content sidebar";
+    grid-template-columns: 1fr 30vw;
+
+    background-color: var(--bg-secondary);
+    color: var(--fg-primary);
+    font-family: monospace, "helvetica";
+}
+
+aside, header, section {
+    padding-inline: 1.5rem;
+}
+
+header {
+    min-height: 100vh;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+
+    background-color: var(--bg-primary);
+    color: var(--fg-primary);
+    font-size: 4ch;
+}
+
+main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    grid-area: sidebar;
+    padding-block: 1.5rem;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+section:nth-child(even) {
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+header img {
+    margin-right: 3rem;
+    max-height: 30rem;
+}
+
+
+section ul {
+    flex: 1;
+    max-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 2ch;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+aside h2 {
+    text-align: center;
+    padding-block: 1rem;
+}
+
+@media (max-width: 680px), screen and (orientation: portrait) {
+    body {
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar";
+        grid-template-columns: 1fr;
+    }
+}

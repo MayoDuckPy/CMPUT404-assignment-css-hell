@@ -1,0 +1,70 @@
+:root {
+    --bg-primary:   black;
+    --bg-secondary: darkgray;
+    --fg-primary:   white;
+    --fg-secondary: lightgray;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        ". header header"
+        "sidebar content content"
+        ". content content";
+    align-items: center;
+    background: repeating-radial-gradient(green, magenta 200px);
+    color: var(--fg-primary);
+    text-align: center;
+    margin-inline: auto;
+}
+
+header {
+    grid-area: header;
+    color: greenyellow;
+    box-shadow: 0 0 45px green;
+}
+
+main {
+    grid-area: content;
+    grid-template-areas:
+        ". content1"
+        "content2 .";
+    display: grid;
+}
+
+aside {
+    grid-area: sidebar;
+    padding-block: 1.5rem;
+    color: cyan;
+    background: radial-gradient(yellow, green);
+}
+
+section {
+    grid-area: content1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: khaki;
+    background: radial-gradient(red, blue);
+}
+
+section:nth-child(odd) {
+    grid-area: content2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: 2ch;
+}
+
+header img {
+    max-height: 10rem;
+    filter: hue-rotate(127deg);
+}
